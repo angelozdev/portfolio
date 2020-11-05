@@ -25,7 +25,7 @@ export const Item = styled.li`
 
 export const Logo = styled.h3`
    position: absolute;
-   left: 0;
+   left: 1rem;
 
    @media (max-width: ${breakpoints.SM}) {
       display: none;
