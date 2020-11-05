@@ -6,16 +6,16 @@ export const Container = styled.header`
 `
 
 export const Grid = styled.div`
+   position: relative;
    display: flex;
    align-items: center;
    justify-content: center;
-   position: relative;
 `
 
 export const List = styled.ul`
    display: flex;
-   list-style: none;
    padding-left: 0;
+   list-style: none;
 `
 
 export const Item = styled.li`

@@ -7,10 +7,10 @@ const GlobalStyle = css`
    }
 
    body {
-      margin: 0;
       padding: 0;
-      font-family: 'Inter', sans-serif;
+      margin: 0;
       color: ${colors.FONT};
+      font-family: 'Inter', sans-serif;
    }
 
    a {
