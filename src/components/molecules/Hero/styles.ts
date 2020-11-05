@@ -2,18 +2,18 @@ import styled from '@emotion/styled'
 import { breakpoints, colors } from '@src/styles/theme'
 
 export const Container = styled.section`
-   height: calc(100vh - 84px);
    display: flex;
+   height: calc(100vh - 84px);
    align-items: center;
-   text-align: center;
    border-bottom: 1rem solid ${colors.FONT};
+   text-align: center;
 `
 
 export const Grid = styled.div`
    display: flex;
    flex-direction: column;
-   justify-content: center;
    align-items: center;
+   justify-content: center;
    margin: -145px 0;
 
    @media (max-width: ${breakpoints.MD}) {
@@ -22,8 +22,8 @@ export const Grid = styled.div`
 `
 
 export const Name = styled.h1`
-   font-size: 4.25rem;
    margin: 0;
+   font-size: 4.25rem;
 
    @media (max-width: ${breakpoints.MD}) {
       font-size: 2.75rem;
@@ -39,9 +39,9 @@ export const Name = styled.h1`
 `
 
 export const Description = styled.h2`
+   margin: 0;
    font-size: 1.5rem;
    font-weight: 300;
-   margin: 0;
 
    @media (max-width: ${breakpoints.MD}) {
       font-size: 1rem;
