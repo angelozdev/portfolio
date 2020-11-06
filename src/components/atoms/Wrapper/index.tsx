@@ -8,10 +8,17 @@ import { MaxWidth } from '@src/interfaces/styles'
 interface Props {
    children: React.ReactNode
    maxWidth?: MaxWidth
+   padding?: boolean
 }
 
-function Wrapper({ children, maxWidth = '1024px' }: Props): JSX.Element {
-   return <WrapperStyled theme={{ maxWidth }}>{children}</WrapperStyled>
+function Wrapper({
+   children,
+   maxWidth = '1024px',
+   padding = true
+}: Props): JSX.Element {
+   return (
+      <WrapperStyled theme={{ maxWidth, padding }}>{children}</WrapperStyled>
+   )
 }
 
 export default Wrapper

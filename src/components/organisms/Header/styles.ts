@@ -21,6 +21,10 @@ export const List = styled.ul`
 export const Item = styled.li`
    height: 100%;
    padding: 1rem;
+
+   @media (max-width: ${breakpoints.SM}) {
+      padding: 0.5rem 1rem;
+   }
 `
 
 export const Logo = styled.h3`

@@ -24,7 +24,7 @@ function Header(): JSX.Element {
 
    return (
       <Container id="#">
-         <Wrapper maxWidth="1024px">
+         <Wrapper maxWidth="100%">
             <Grid>
                <Logo>
                   <Anchor href="#">AZ</Anchor>

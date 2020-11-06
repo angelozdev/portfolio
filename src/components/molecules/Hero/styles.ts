@@ -1,23 +1,25 @@
 import styled from '@emotion/styled'
-import { breakpoints, colors } from '@src/styles/theme'
+import { breakpoints } from '@src/styles/theme'
+
+const headerHeight = 84
 
 export const Container = styled.section`
    display: flex;
-   height: calc(100vh - 84px);
+   min-height: calc(100vh - ${headerHeight}px - 0.5rem);
    align-items: center;
-   border-bottom: 1rem solid ${colors.FONT};
-   text-align: center;
+
+   @media (max-width: ${breakpoints.SM}) {
+      min-height: calc(70vh);
+   }
 `
 
 export const Grid = styled.div`
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   margin: -145px 0;
+   width: 100%;
+   margin-top: -${headerHeight}px;
+   text-align: center;
 
-   @media (max-width: ${breakpoints.MD}) {
-      margin: -84px 0;
+   @media (max-width: ${breakpoints.SM}) {
+      margin-top: -${headerHeight / 2}px;
    }
 `
 
