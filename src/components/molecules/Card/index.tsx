@@ -1,7 +1,14 @@
 import React from 'react'
 
 /* Styles */
-import { Container, Title, Description, Grid } from './styles'
+import {
+   Container,
+   Title,
+   Description,
+   Grid,
+   ImageContainer,
+   Image
+} from './styles'
 import { backgrounds } from '@src/styles/theme'
 
 /* Components */
@@ -24,6 +31,10 @@ interface PropsTitle extends WithChildren {
 interface PropsGrid extends WithChildren {
    columns: number
    mount: boolean
+}
+
+interface PropsImage extends React.ImgHTMLAttributes<HTMLImageElement> {
+   src: string
 }
 
 function Card({
@@ -49,6 +60,14 @@ Card.Title = function CardTitle({ children, divider = false }: PropsTitle) {
 
 Card.Grid = function CardGrid({ columns, children, mount }: PropsGrid) {
    return <Grid theme={{ columns, mount }}>{children}</Grid>
+}
+
+Card.Image = function CardImage({ ...props }: PropsImage) {
+   return (
+      <ImageContainer>
+         <Image {...props} />
+      </ImageContainer>
+   )
 }
 
 export default Card

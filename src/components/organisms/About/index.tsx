@@ -1,15 +1,7 @@
 import React from 'react'
 
 /* Styles */
-import {
-   Container,
-   Grid,
-   Title,
-   Description,
-   Pane,
-   Image,
-   ImageContainer
-} from './styles'
+import { Container, Grid, Title, Description, Pane } from './styles'
 import { backgrounds, colors } from '@src/styles/theme'
 
 /* Components */
@@ -21,6 +13,8 @@ import { React as ReactIcon } from '@components/Icons'
 import image from '@src/../public/image.jpg'
 
 function About(): JSX.Element {
+   console.log(image)
+
    return (
       <Container id="about">
          <Pane theme={{ color: colors.WHITE, bg: backgrounds.BLACK }}>
@@ -57,9 +51,7 @@ function About(): JSX.Element {
                      <SocialNetworks />
                   </Card>
                   <Card padding={false} background={backgrounds.WHITE}>
-                     <ImageContainer>
-                        <Image src={image} alt="image by Angelo Zambrano" />
-                     </ImageContainer>
+                     <Card.Image src={image} alt="Angelo Zambrano's image" />
                   </Card>
                </Card.Grid>
             </Wrapper>
