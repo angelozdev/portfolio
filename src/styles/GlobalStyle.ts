@@ -24,22 +24,20 @@ const GlobalStyle = css`
 
    /* width */
    ::-webkit-scrollbar {
-      width: 0.5rem;
+      width: 10px;
    }
 
    /* Track */
    ::-webkit-scrollbar-track {
-      background: #eee;
+      margin: 2px 0px;
+      background: rgb(70, 69, 66);
+      border-radius: 12px;
    }
 
    /* Handle */
    ::-webkit-scrollbar-thumb {
-      background: #555;
-   }
-
-   /* Handle on hover */
-   ::-webkit-scrollbar-thumb:hover {
-      background: #222;
+      background: rgb(102, 102, 102);
+      border-radius: 4px;
    }
 `
 export default GlobalStyle
