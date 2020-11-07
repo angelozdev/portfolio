@@ -11,7 +11,15 @@ module.exports = {
    },
    module: {
       rules: [
-         { test: /\.(t|j)sx?$/, use: 'babel-loader', exclude: /node_modules/ }
+         {
+            test: /\.(t|j)sx?$/,
+            use: 'babel-loader',
+            exclude: /node_modules/
+         },
+         {
+            test: /\.(png|jpge?|gif)$/i,
+            use: 'file-loader'
+         }
       ]
    },
    devServer: {

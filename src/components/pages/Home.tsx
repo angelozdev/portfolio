@@ -1,16 +1,14 @@
 import React from 'react'
 
 /* Components */
-import { Header } from '@components/organisms'
-import { Hero } from '@components/molecules'
+import { Header, Hero, About } from '@components/organisms'
 
 function Home(): JSX.Element {
    return (
       <React.Fragment>
          <Header />
          <Hero />
-         <div style={{ minHeight: '50vh', background: '#1a1a1a' }}></div>
-         <div style={{ minHeight: '50vh' }}></div>
+         <About />
       </React.Fragment>
    )
 }
