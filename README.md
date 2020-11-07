@@ -41,7 +41,7 @@ _Technologies used in the frontend.:_
 -  **Stylelint**
 
 ## Preview
-![](./screenshot)
+![](./screenshot.png)
 
 ## License
 
