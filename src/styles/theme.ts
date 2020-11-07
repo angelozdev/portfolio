@@ -27,3 +27,10 @@ export enum breakpoints {
    SM = '425px',
    XS = '320px'
 }
+
+export enum social {
+   GMAIL = '#d14836',
+   TWITTER = '#1da1f2',
+   LINKEDIN = '#0077b5',
+   GITHUB = '#181717'
+}

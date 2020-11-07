@@ -1,1 +1,5 @@
 export { default as React } from './React'
+export { default as Gmail } from './Gmail'
+export { default as GitHub } from './GitHub'
+export { default as LinkedIn } from './LinkedIn'
+export { default as Twitter } from './Twitter'

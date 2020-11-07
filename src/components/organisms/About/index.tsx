@@ -2,12 +2,12 @@ import React from 'react'
 
 /* Styles */
 import { Container, Grid, Title, Description, Pane } from './styles'
+import { backgrounds, colors } from '@src/styles/theme'
 
 /* Components */
 import { Divider, Wrapper } from '@src/components/atoms'
-import { Card } from '@src/components/molecules'
+import { Card, SocialNetworks } from '@src/components/molecules'
 import { React as ReactIcon } from '@components/Icons'
-import { backgrounds, colors } from '@src/styles/theme'
 
 function About(): JSX.Element {
    return (
@@ -41,6 +41,8 @@ function About(): JSX.Element {
                         learning from YouTube videos and online education
                         platforms like Platzi and Udemy.
                      </Card.Description>
+
+                     <SocialNetworks />
                   </Card>
                   <Card background={backgrounds.RED}>
                      <img src="" alt="" />
