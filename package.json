@@ -50,14 +50,5 @@
       "webpack": "^5.4.0",
       "webpack-cli": "^4.2.0",
       "webpack-dev-server": "^3.11.0"
-   },
-   "husky": {
-      "hooks": {
-         "pre-commit": "lint-staged && npm run lint:css",
-         "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-      }
-   },
-   "lint-staged": {
-      "*.{js,ts,tsx,jsx}": "eslint --cache --fix"
    }
 }
