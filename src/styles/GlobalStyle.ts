@@ -6,6 +6,10 @@ const GlobalStyle = css`
       box-sizing: border-box;
    }
 
+   html {
+      scroll-behavior: smooth;
+   }
+
    body {
       padding: 0;
       margin: 0;
@@ -14,6 +18,7 @@ const GlobalStyle = css`
    }
 
    a {
+      color: ${colors.FONT};
       text-decoration: none;
    }
 

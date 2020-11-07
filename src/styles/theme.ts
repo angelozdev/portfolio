@@ -1,10 +1,22 @@
 /* eslint-disable no-unused-vars */
 export enum colors {
-   FONT = '#1a1a1a'
+   FONT = '#1a1a1a',
+   WHITE = '#fff',
+   DARK_BLUE = '#224b54',
+   RED = '#c1605c'
+}
+
+export enum backgrounds {
+   DARK_BLUE = 'linear-gradient(145deg, #24505a, #1f444c)',
+   RED = 'linear-gradient(145deg, #cf6762, #ae5653)',
+   BLACK = 'linear-gradient(145deg, #1c1c1c, #171717);',
+   WHITE = 'linear-gradient(145deg, #ffffff, #e6e6e6)',
+   TRANSPARENT = 'transparent'
 }
 
 export enum shadows {
-   NORMAL = '3px 3px 20px rgba(0, 0, 0, 0.1)'
+   NORMAL = '3px 3px 20px rgba(0, 0, 0, 0.2)',
+   INNER = 'inset 4px 3px 20px rgba(0, 0, 0, 0.1);'
 }
 
 export enum breakpoints {

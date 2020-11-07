@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { breakpoints } from '@src/styles/theme'
+import { backgrounds, breakpoints } from '@src/styles/theme'
 
 const headerHeight = 84
 
@@ -7,6 +7,7 @@ export const Container = styled.section`
    display: flex;
    min-height: calc(100vh - ${headerHeight}px - 0.5rem);
    align-items: center;
+   background: ${backgrounds.WHITE};
 
    @media (max-width: ${breakpoints.SM}) {
       min-height: calc(70vh);

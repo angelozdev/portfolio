@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { breakpoints, colors, shadows } from '@src/styles/theme'
+import { breakpoints, shadows } from '@src/styles/theme'
 
 export const Container = styled.header`
    box-shadow: ${shadows.NORMAL};
@@ -12,21 +12,6 @@ export const Grid = styled.div`
    justify-content: center;
 `
 
-export const List = styled.ul`
-   display: flex;
-   padding-left: 0;
-   list-style: none;
-`
-
-export const Item = styled.li`
-   height: 100%;
-   padding: 1rem;
-
-   @media (max-width: ${breakpoints.SM}) {
-      padding: 0.5rem 1rem;
-   }
-`
-
 export const Logo = styled.h3`
    position: absolute;
    left: 1rem;
@@ -36,6 +21,4 @@ export const Logo = styled.h3`
    }
 `
 
-export const Anchor = styled.a`
-   color: ${colors.FONT};
-`
+export const Anchor = styled.a``
