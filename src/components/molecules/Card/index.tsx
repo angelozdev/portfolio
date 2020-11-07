@@ -10,6 +10,7 @@ import { Divider } from '@src/components/atoms'
 /* Types */
 interface Props extends WithChildren {
    background?: backgrounds
+   padding?: boolean
 }
 
 interface WithChildren {
@@ -27,9 +28,10 @@ interface PropsGrid extends WithChildren {
 
 function Card({
    background = backgrounds.BLACK,
-   children
+   children,
+   padding = true
 }: Props): JSX.Element {
-   return <Container theme={{ background }}>{children}</Container>
+   return <Container theme={{ background, padding }}>{children}</Container>
 }
 
 Card.Description = function CardDescription({ children }: WithChildren) {

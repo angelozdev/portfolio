@@ -16,7 +16,8 @@ export enum backgrounds {
 
 export enum shadows {
    NORMAL = '3px 3px 20px rgba(0, 0, 0, 0.2)',
-   INNER = 'inset 4px 3px 20px rgba(0, 0, 0, 0.1);'
+   LG = '3px 3px 20px rgba(0, 0, 0, 0.5)',
+   INNER = 'inset 3px 3px 20px rgba(0, 0, 0, 0.1)'
 }
 
 export enum breakpoints {

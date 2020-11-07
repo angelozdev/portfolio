@@ -1,13 +1,24 @@
 import React from 'react'
 
 /* Styles */
-import { Container, Grid, Title, Description, Pane } from './styles'
+import {
+   Container,
+   Grid,
+   Title,
+   Description,
+   Pane,
+   Image,
+   ImageContainer
+} from './styles'
 import { backgrounds, colors } from '@src/styles/theme'
 
 /* Components */
 import { Divider, Wrapper } from '@src/components/atoms'
 import { Card, SocialNetworks } from '@src/components/molecules'
 import { React as ReactIcon } from '@components/Icons'
+
+/* Images */
+import image from '@src/../public/image.jpg'
 
 function About(): JSX.Element {
    return (
@@ -33,6 +44,7 @@ function About(): JSX.Element {
                <Card.Grid mount columns={2}>
                   <Card background={backgrounds.DARK_BLUE}>
                      <Card.Title divider>About.</Card.Title>
+
                      <Card.Description>
                         I was born on December 17, 1997, in Bogotá, Colombia. I
                         am passionate about web technologies, mainly because of
@@ -44,8 +56,10 @@ function About(): JSX.Element {
 
                      <SocialNetworks />
                   </Card>
-                  <Card background={backgrounds.RED}>
-                     <img src="" alt="" />
+                  <Card padding={false} background={backgrounds.WHITE}>
+                     <ImageContainer>
+                        <Image src={image} alt="image by Angelo Zambrano" />
+                     </ImageContainer>
                   </Card>
                </Card.Grid>
             </Wrapper>

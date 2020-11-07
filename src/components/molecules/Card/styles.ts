@@ -1,7 +1,14 @@
 import styled from '@emotion/styled'
-import { backgrounds, breakpoints, colors } from '@src/styles/theme'
+import {
+   backgrounds,
+   breakpoints,
+   colors,
+   shadows,
+   transitions
+} from '@src/styles/theme'
 
 interface ContainerTheme {
+   padding: boolean
    background: backgrounds
 }
 
@@ -11,10 +18,17 @@ interface GridTheme {
 }
 
 export const Container = styled.div`
-   padding: 2rem;
+   position: relative;
+   padding: ${({ theme }) => (theme.padding ? '2rem' : 0)};
    background: ${({ theme }: { theme: ContainerTheme }) => theme.background};
+   box-shadow: inset ${shadows.NORMAL};
    color: ${colors.WHITE};
    text-align: left;
+   transition: all ${transitions.NORMAL};
+
+   &:hover {
+      box-shadow: inset ${shadows.LG}, ${shadows.NORMAL};
+   }
 
    @media (max-width: ${breakpoints.MD}) {
       padding: 2rem 1rem;
