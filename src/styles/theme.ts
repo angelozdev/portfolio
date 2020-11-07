@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 export enum colors {
    FONT = '#1a1a1a',
-   WHITE = '#fff',
+   WHITE = '#ffffff',
    DARK_BLUE = '#224b54',
    RED = '#c1605c'
 }
@@ -33,4 +33,8 @@ export enum social {
    TWITTER = '#1da1f2',
    LINKEDIN = '#0077b5',
    GITHUB = '#181717'
+}
+
+export enum transitions {
+   NORMAL = '300ms ease-out'
 }
