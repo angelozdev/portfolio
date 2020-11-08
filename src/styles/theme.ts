@@ -48,7 +48,10 @@ export enum techs {
    TAILWIND = '#38b2ac',
    WEBPACK = '#8dd6f9',
    SC = '#db7093',
-   BOOTSTRAP = '#563d7c'
+   BOOTSTRAP = '#563d7c',
+   NODE = '#339933',
+   GRAPHQL = '#E10098',
+   RRD = '#CA4245'
 }
 
 export enum transitions {

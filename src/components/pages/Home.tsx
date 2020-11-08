@@ -4,13 +4,24 @@ import React from 'react'
 import { Header, Hero, About } from '@components/organisms'
 import { Technologies } from '@components/molecules'
 
+/* Fixtures */
+import frontTechnologies from '@src/fixtures/frontendTechnologies'
+import backTechnologies from '@src/fixtures/backendTechnologies'
+
 function Home(): JSX.Element {
    return (
       <React.Fragment>
          <Header />
          <Hero />
          <About />
-         <Technologies title="Frontend Technologies" />
+         <Technologies
+            technologies={frontTechnologies}
+            title="Frontend Technologies."
+         />
+         <Technologies
+            technologies={backTechnologies}
+            title="Backend Technologies."
+         />
       </React.Fragment>
    )
 }
