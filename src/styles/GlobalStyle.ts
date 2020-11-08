@@ -10,6 +10,11 @@ const GlobalStyle = css`
       scroll-behavior: smooth;
    }
 
+   ::selection {
+      background: ${colors.FONT};
+      color: ${colors.WHITE};
+   }
+
    body {
       padding: 0;
       margin: 0;
