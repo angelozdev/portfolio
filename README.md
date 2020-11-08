@@ -10,7 +10,7 @@ _You can clone this repository to have the project local:_
 git clone https://github.com/angelozdev/portfolio.git
 ```
 
-_Install the necessary dependencies in the root of the project._
+_Install the necessary dependencies in the root of the project:_
 
 ```bash
 npm install
@@ -28,7 +28,7 @@ _You can see the project in production [soon...]()_
 
 ## Built with
 
-_Technologies used in the frontend.:_
+_Technologies used in the frontend:_
 
 -  **@emotion** is a library designed for writing css styles with JavaScript.
 -  **Babel** is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.

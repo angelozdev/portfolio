@@ -36,6 +36,21 @@ export enum social {
    GITHUB = '#181717'
 }
 
+export enum techs {
+   REACT = '#61dafb',
+   TS = '#000077',
+   JS = '#f7df1e',
+   HTML = '#e34f26',
+   CSS = '#1572b6',
+   REDUX = '#764abc',
+   STYLUS = '#333333',
+   SASS = '#cc6699',
+   TAILWIND = '#38b2ac',
+   WEBPACK = '#8dd6f9',
+   SC = '#db7093',
+   BOOTSTRAP = '#563d7c'
+}
+
 export enum transitions {
    NORMAL = '300ms ease-out'
 }
