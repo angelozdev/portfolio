@@ -9,7 +9,7 @@ import {
    ImageContainer,
    Image
 } from './styles'
-import { backgrounds } from '@src/styles/theme'
+import { backgrounds, colors } from '@src/styles/theme'
 
 /* Components */
 import { Divider } from '@src/components/atoms'
@@ -18,6 +18,9 @@ import { Divider } from '@src/components/atoms'
 interface Props extends WithChildren {
    background?: backgrounds
    padding?: boolean
+   hiddenOnMobile?: boolean
+   center?: boolean
+   color?: colors
 }
 
 interface WithChildren {
@@ -30,7 +33,7 @@ interface PropsTitle extends WithChildren {
 
 interface PropsGrid extends WithChildren {
    columns: number
-   mount: boolean
+   mount?: boolean
 }
 
 interface PropsImage extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -40,9 +43,16 @@ interface PropsImage extends React.ImgHTMLAttributes<HTMLImageElement> {
 function Card({
    background = backgrounds.BLACK,
    children,
-   padding = true
+   padding = true,
+   hiddenOnMobile = false,
+   center = true,
+   color = colors.WHITE
 }: Props): JSX.Element {
-   return <Container theme={{ background, padding }}>{children}</Container>
+   return (
+      <Container theme={{ background, padding, hiddenOnMobile, center, color }}>
+         {children}
+      </Container>
+   )
 }
 
 Card.Description = function CardDescription({ children }: WithChildren) {
@@ -58,7 +68,7 @@ Card.Title = function CardTitle({ children, divider = false }: PropsTitle) {
    )
 }
 
-Card.Grid = function CardGrid({ columns, children, mount }: PropsGrid) {
+Card.Grid = function CardGrid({ columns, children, mount = false }: PropsGrid) {
    return <Grid theme={{ columns, mount }}>{children}</Grid>
 }
 

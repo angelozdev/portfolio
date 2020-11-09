@@ -36,7 +36,7 @@ function About(): JSX.Element {
          <Pane>
             <Wrapper padding={false} maxWidth="1024px">
                <Card.Grid mount columns={2}>
-                  <Card background={backgrounds.DARK_BLUE}>
+                  <Card center={false} background={backgrounds.DARK_BLUE}>
                      <Card.Title divider>About.</Card.Title>
 
                      <Card.Description>
@@ -50,7 +50,11 @@ function About(): JSX.Element {
 
                      <SocialNetworks />
                   </Card>
-                  <Card padding={false} background={backgrounds.WHITE}>
+                  <Card
+                     hiddenOnMobile
+                     padding={false}
+                     background={backgrounds.WHITE}
+                  >
                      <Card.Image src={image} alt="Angelo Zambrano's image" />
                   </Card>
                </Card.Grid>

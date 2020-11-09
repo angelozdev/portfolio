@@ -10,6 +10,9 @@ import {
 interface ContainerTheme {
    padding: boolean
    background: backgrounds
+   hiddenOnMobile: boolean
+   center: boolean
+   color: colors
 }
 
 interface GridTheme {
@@ -23,14 +26,17 @@ export const Container = styled.div`
    background: ${({ theme }: { theme: ContainerTheme }) => theme.background};
    box-shadow: inset ${shadows.NORMAL};
    color: ${colors.WHITE};
+   color: ${({ theme }) => theme.color};
    text-align: left;
+   text-align: ${({ theme }) => (theme.center ? 'center' : 'left')};
    transition: all ${transitions.NORMAL};
-
    &:hover {
       box-shadow: inset ${shadows.LG}, ${shadows.NORMAL};
    }
 
    @media (max-width: ${breakpoints.MD}) {
+
+      display: ${({ theme }) => (theme.hiddenOnMobile ? 'none' : 'initial')};
       padding: 2rem 1rem;
       text-align: center;
    }
@@ -54,10 +60,6 @@ export const Grid = styled.div`
 
    @media (max-width: ${breakpoints.MD}) {
       grid-template-columns: repeat(1, 1fr);
-
-      & ${Container}:nth-of-type(2) {
-         display: none;
-      }
    }
 `
 
