@@ -7,7 +7,8 @@ import {
    Description,
    Grid,
    ImageContainer,
-   Image
+   Image,
+   Anchor
 } from './styles'
 import { backgrounds, colors } from '@src/styles/theme'
 
@@ -21,6 +22,7 @@ interface Props extends WithChildren {
    hiddenOnMobile?: boolean
    center?: boolean
    color?: colors
+   size?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 }
 
 interface WithChildren {
@@ -40,16 +42,21 @@ interface PropsImage extends React.ImgHTMLAttributes<HTMLImageElement> {
    src: string
 }
 
+type PropsAnchor = React.AnchorHTMLAttributes<HTMLAnchorElement>
+
 function Card({
    background = backgrounds.BLACK,
    children,
    padding = true,
    hiddenOnMobile = false,
    center = true,
-   color = colors.WHITE
+   color = colors.WHITE,
+   size = 12
 }: Props): JSX.Element {
    return (
-      <Container theme={{ background, padding, hiddenOnMobile, center, color }}>
+      <Container
+         theme={{ background, padding, hiddenOnMobile, center, color, size }}
+      >
          {children}
       </Container>
    )
@@ -77,6 +84,14 @@ Card.Image = function CardImage({ ...props }: PropsImage) {
       <ImageContainer>
          <Image {...props} />
       </ImageContainer>
+   )
+}
+
+Card.Anchor = function CardAnchor({ children, ...restProps }: PropsAnchor) {
+   return (
+      <Anchor target="_blank" {...restProps}>
+         {children}
+      </Anchor>
    )
 }
 

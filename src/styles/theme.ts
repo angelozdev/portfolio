@@ -7,18 +7,18 @@ export enum colors {
 }
 
 export enum backgrounds {
-   BLACK = 'linear-gradient(145deg, #1c1c1c, #171717)',
-   DARK_BLUE = 'linear-gradient(145deg, #24505a, #1f444c)',
-   GREEN = 'linear-gradient(145deg, #43c49a, #39a582);',
-   RED = 'linear-gradient(145deg, #cf6762, #ae5653)',
+   BLACK = 'linear-gradient(145deg, #171717, #1c1c1c)',
+   DARK_BLUE = 'linear-gradient(145deg, #1f444c, #24505a)',
+   GREEN = 'linear-gradient(145deg, #39a582, #43c49a);',
+   RED = 'linear-gradient(145deg, #ae5653, #cf6762)',
    TRANSPARENT = 'transparent',
-   WHITE = 'linear-gradient(145deg, #fffffd, #e6e6e6);'
+   WHITE = 'linear-gradient(145deg, #e6e6e6, #fffffd)'
 }
 
 export enum shadows {
-   NORMAL = '3px 3px 20px rgba(0, 0, 0, 0.2)',
-   LG = '3px 3px 20px rgba(0, 0, 0, 0.5)',
-   INNER = 'inset 3px 3px 20px rgba(0, 0, 0, 0.1)'
+   NORMAL = '3px 3px 10px rgba(0, 0, 0, 0.2)',
+   SM = '3px 3px 10px rgba(0, 0, 0, 0.1)',
+   LG = '3px 3px 20px rgba(0, 0, 0, 0.5)'
 }
 
 export enum breakpoints {
