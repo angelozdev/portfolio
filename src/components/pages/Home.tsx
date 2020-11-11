@@ -1,7 +1,7 @@
 import React from 'react'
 
 /* Components */
-import { Header, Hero, About } from '@components/organisms'
+import { Header, Hero, About, Projects } from '@components/organisms'
 import { Technologies } from '@components/molecules'
 
 /* Fixtures */
@@ -22,6 +22,7 @@ function Home(): JSX.Element {
             technologies={backTechnologies}
             title="Backend Technologies."
          />
+         <Projects />
       </React.Fragment>
    )
 }

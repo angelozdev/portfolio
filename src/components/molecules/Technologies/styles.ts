@@ -35,7 +35,7 @@ export const IconContainer = styled.div`
    transition: all ${transitions.NORMAL};
 
    &:hover {
-      box-shadow: ${shadows.NORMAL};
+      box-shadow: inset ${shadows.SM};
    }
 `
 
