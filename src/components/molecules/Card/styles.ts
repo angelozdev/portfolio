@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { DividerStyled } from '@components/atoms/Divider/styles'
 import {
    backgrounds,
    breakpoints,
@@ -21,28 +22,6 @@ interface GridTheme {
    mount: boolean
 }
 
-export const Container = styled.div`
-   position: relative;
-   padding: ${({ theme }) => (theme.padding ? '5rem 2rem' : 0)};
-   background: ${({ theme }: { theme: ContainerTheme }) => theme.background};
-   color: ${({ theme }) => theme.color};
-
-   grid-column-start: span ${({ theme }) => theme.size};
-   text-align: left;
-   text-align: ${({ theme }) => (theme.center ? 'center' : 'left')};
-   transition: all ${transitions.NORMAL};
-   &:hover {
-      box-shadow: inset ${shadows.NORMAL}, ${shadows.NORMAL};
-   }
-
-   @media (max-width: ${breakpoints.MD}) {
-      display: ${({ theme }) => (theme.hiddenOnMobile ? 'none' : 'initial')};
-      padding: 5rem 1rem;
-      grid-column-start: span 12;
-      text-align: center;
-   }
-`
-
 export const Grid = styled.div`
    display: grid;
    grid-template-columns: repeat(
@@ -63,6 +42,7 @@ export const Grid = styled.div`
 export const Title = styled.h3`
    margin: 0;
    font-size: 2rem;
+   transition: all ${transitions.FAST};
 
    @media (max-width: ${breakpoints.MD}) {
       font-size: 1.75rem;
@@ -76,8 +56,10 @@ export const Title = styled.h3`
       font-size: 1.25rem;
    }
 `
+
 export const Description = styled.div`
    padding: 2rem 0;
+   transition: all ${transitions.FAST};
 
    @media (max-width: ${breakpoints.MD}) {
       font-size: 1rem;
@@ -87,6 +69,42 @@ export const Description = styled.div`
       font-size: 0.85rem;
    }
 `
+
+export const Container = styled.div`
+   position: relative;
+   padding: ${({ theme }) => (theme.padding ? '5rem 2rem' : 0)};
+   background: ${({ theme }: { theme: ContainerTheme }) => theme.background};
+   color: ${({ theme }) => theme.color};
+
+   grid-column-start: span ${({ theme }) => theme.size};
+   text-align: left;
+   text-align: ${({ theme }) => (theme.center ? 'center' : 'left')};
+   transition: all ${transitions.NORMAL};
+
+   &:hover {
+      box-shadow: inset ${shadows.NORMAL}, ${shadows.NORMAL};
+
+      & ${Title} {
+         transform: translateY(-0.5rem);
+      }
+
+      & ${Description} {
+         transform: translateY(0.5rem);
+      }
+
+      & ${DividerStyled} {
+         transform: scale(1.1) translateY(0.25rem);
+      }
+   }
+
+   @media (max-width: ${breakpoints.MD}) {
+      display: ${({ theme }) => (theme.hiddenOnMobile ? 'none' : 'initial')};
+      padding: 5rem 1rem;
+      grid-column-start: span 12;
+      text-align: center;
+   }
+`
+
 export const Image = styled.img`
    position: absolute;
    top: 0;

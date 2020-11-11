@@ -12,7 +12,7 @@ export enum backgrounds {
    GREEN = 'linear-gradient(145deg, #39a582, #43c49a);',
    RED = 'linear-gradient(145deg, #ae5653, #cf6762)',
    TRANSPARENT = 'transparent',
-   WHITE = 'linear-gradient(145deg, #e6e6e6, #fffffd)'
+   WHITE = 'linear-gradient(145deg, #efefef, #ffffff)'
 }
 
 export enum shadows {
@@ -56,5 +56,6 @@ export enum techs {
 }
 
 export enum transitions {
-   NORMAL = '300ms ease-out'
+   NORMAL = '300ms ease-out',
+   FAST = '300ms cubic-bezier(.4,.01,.14,1.87)'
 }

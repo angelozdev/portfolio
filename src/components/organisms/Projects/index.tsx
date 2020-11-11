@@ -34,7 +34,7 @@ function Projects() {
                         background={background}
                      >
                         <Card.Anchor href={link}>
-                           <Card.Title>{title}</Card.Title>
+                           <Card.Title divider>{title}</Card.Title>
                            <Wrapper padding={false} maxWidth="768px">
                               <Card.Description>{description}</Card.Description>
                            </Wrapper>
