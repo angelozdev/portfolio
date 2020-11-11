@@ -32,12 +32,10 @@ export const Icon = styled.a`
    }
 `
 export const Container = styled.div`
-   position: absolute;
-   bottom: 2rem;
    display: flex;
    margin-top: 2rem;
 
    @media (max-width: ${breakpoints.MD}) {
-      position: initial;
+      justify-content: center;
    }
 `

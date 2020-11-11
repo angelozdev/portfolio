@@ -3,6 +3,7 @@ import { breakpoints, colors } from '@src/styles/theme'
 
 export const Container = styled.section`
    padding: 2rem 0;
+   padding-bottom: 4rem;
 `
 
 export const Title = styled.h2`
