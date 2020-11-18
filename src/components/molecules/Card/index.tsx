@@ -22,6 +22,7 @@ interface Props extends WithChildren {
    hiddenOnMobile?: boolean
    center?: boolean
    color?: colors
+   image?: string
    size?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 }
 
@@ -51,11 +52,20 @@ function Card({
    hiddenOnMobile = false,
    center = true,
    color = colors.WHITE,
-   size = 12
+   size = 12,
+   image = ''
 }: Props): JSX.Element {
    return (
       <Container
-         theme={{ background, padding, hiddenOnMobile, center, color, size }}
+         theme={{
+            background,
+            padding,
+            hiddenOnMobile,
+            center,
+            color,
+            size,
+            image
+         }}
       >
          {children}
       </Container>
