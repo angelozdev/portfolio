@@ -24,7 +24,7 @@ npm run dev
 
 ## Deploy
 
-_You can see the project in production [soon...]()_
+_You can see the project in production [Portfolio](https://portfolio.angelozdev.vercel.app/)_
 
 ## Built with
 
