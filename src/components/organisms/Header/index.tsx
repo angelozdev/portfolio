@@ -13,7 +13,7 @@ function Header(): JSX.Element {
          <Wrapper maxWidth="100%">
             <Grid>
                <Logo>
-                  <Anchor href="#">AZ</Anchor>
+                  <Anchor>AZ</Anchor>
                </Logo>
                <List />
             </Grid>

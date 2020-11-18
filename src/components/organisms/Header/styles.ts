@@ -21,4 +21,6 @@ export const Logo = styled.h3`
    }
 `
 
-export const Anchor = styled.a``
+export const Anchor = styled.a`
+   cursor: pointer;
+`
