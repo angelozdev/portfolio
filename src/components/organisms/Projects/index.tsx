@@ -23,7 +23,8 @@ function Projects() {
                      description,
                      link,
                      size,
-                     title
+                     title,
+                     image
                   } = project
                   return (
                      <Card
@@ -32,6 +33,7 @@ function Projects() {
                         size={size}
                         center
                         background={background}
+                        image={image}
                      >
                         <Card.Anchor href={link}>
                            <Card.Title divider>{title}</Card.Title>

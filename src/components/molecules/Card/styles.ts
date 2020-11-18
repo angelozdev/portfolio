@@ -14,6 +14,7 @@ interface ContainerTheme {
    hiddenOnMobile: boolean
    center: boolean
    color: colors
+   image: string
    size: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 }
 
@@ -72,17 +73,48 @@ export const Description = styled.div`
 
 export const Container = styled.div`
    position: relative;
-   padding: ${({ theme }) => (theme.padding ? '5rem 2rem' : 0)};
-   background: ${({ theme }: { theme: ContainerTheme }) => theme.background};
+   padding: ${({ theme }: { theme: ContainerTheme }) =>
+      theme.padding ? '5rem 2rem' : 0};
    color: ${({ theme }) => theme.color};
-
    grid-column-start: span ${({ theme }) => theme.size};
    text-align: left;
    text-align: ${({ theme }) => (theme.center ? 'center' : 'left')};
    transition: all ${transitions.NORMAL};
 
+   ${({ theme }) => {
+      if (theme.image) {
+         return `
+            background: url('${theme.image}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+
+            &::before {
+               transition: all ${transitions.NORMAL};
+
+               content: "";
+               position: absolute;
+               top: 0;
+               right: 0;
+               bottom: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: ${theme.background};
+               opacity: .97;
+            }
+         `
+      } else {
+         return `background: ${theme.background};`
+      }
+   }}
+
    &:hover {
       box-shadow: inset ${shadows.NORMAL}, ${shadows.NORMAL};
+
+      &::before {
+         opacity: 0.9;
+      }
 
       & ${Title} {
          transform: translateY(-0.5rem);
@@ -126,5 +158,7 @@ export const ImageContainer = styled.figure`
 `
 
 export const Anchor = styled.a`
+   position: relative;
+   z-index: 10;
    color: inherit;
 `

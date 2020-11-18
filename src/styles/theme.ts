@@ -12,7 +12,9 @@ export enum backgrounds {
    GREEN = 'linear-gradient(145deg, #39a582, #43c49a);',
    RED = 'linear-gradient(145deg, #ae5653, #cf6762)',
    TRANSPARENT = 'transparent',
-   WHITE = 'linear-gradient(145deg, #efefef, #ffffff)'
+   WHITE = 'linear-gradient(145deg, #efefef, #ffffff)',
+   BLUE = 'linear-gradient(145deg, #89abb4, #a3cbd6)',
+   DARK_GREY = 'linear-gradient(145deg, #202529, #272c31)'
 }
 
 export enum shadows {
