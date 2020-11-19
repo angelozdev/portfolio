@@ -3,6 +3,7 @@ import React from 'react'
 /* Components */
 import { Wrapper } from '@src/components/atoms'
 import { HeaderItemsList as List } from '@src/components/molecules'
+import { Logo as LogoIcon } from '@components/Icons'
 
 /* Styles */
 import { Container, Grid, Logo, Anchor } from './styles'
@@ -13,7 +14,9 @@ function Header(): JSX.Element {
          <Wrapper maxWidth="100%">
             <Grid>
                <Logo>
-                  <Anchor>AZ</Anchor>
+                  <Anchor>
+                     <LogoIcon />
+                  </Anchor>
                </Logo>
                <List />
             </Grid>
