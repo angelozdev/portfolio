@@ -1,0 +1,35 @@
+---
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<li class="item">
+  <a class="link" href={href}>
+    <slot />
+  </a>
+</li>
+
+<style>
+  .link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-accents-8);
+    height: 80px;
+    line-height: 80px;
+    padding: 0 1rem;
+    width: 100%;
+    transition: color 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .link:hover {
+    color: var(--color-accents-5);
+  }
+
+  .item.active .link {
+    color: var(--color-success-dark);
+  }
+</style>

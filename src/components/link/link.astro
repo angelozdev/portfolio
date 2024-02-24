@@ -1,0 +1,107 @@
+---
+import { cva } from "../../utils";
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  color?: "success" | "error" | "warning" | "violet" | "cyan" | "gray";
+  highlighted?: boolean;
+}
+
+const {
+  target = "_black",
+  color,
+  highlighted = false,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const link = cva(["link", className], {
+  variants: {
+    color: {
+      success: "success",
+      error: "error",
+      warning: "warning",
+      violet: "violet",
+      cyan: "cyan",
+      gray: "gray",
+    },
+    highlighted: { true: "highlighted", false: "" },
+  },
+  defaultVariants: {
+    color: "gray",
+    highlighted: false,
+  },
+});
+---
+
+<a
+  target={target}
+  data-color={color}
+  class={link({ color, highlighted })}
+  {...rest}
+>
+  <slot />
+</a>
+
+<style>
+  .link {
+    text-decoration: none;
+    border-bottom: 2px solid;
+    color: inherit;
+    border-bottom-color: transparent;
+    cursor: pointer;
+    font-style: normal;
+  }
+
+  .link.success {
+    border-bottom-color: var(--color-success-lighter);
+  }
+
+  .link.success:hover,
+  .link.highlighted.success {
+    background-color: var(--color-success-lighter);
+  }
+
+  .link.error {
+    border-bottom-color: var(--color-error-lighter);
+  }
+
+  .link.error:hover,
+  .link.highlighted.error {
+    background-color: var(--color-error-lighter);
+  }
+
+  .link.warning {
+    border-bottom-color: var(--color-warning-lighter);
+  }
+
+  .link.warning:hover,
+  .link.highlighted.warning {
+    background-color: var(--color-warning-lighter);
+  }
+
+  .link.violet {
+    border-bottom-color: var(--color-violet-lighter);
+  }
+
+  .link.violet:hover,
+  .link.highlighted.violet {
+    background-color: var(--color-violet-lighter);
+  }
+
+  .link.cyan {
+    border-bottom-color: var(--color-cyan-lighter);
+  }
+
+  .link.cyan:hover,
+  .link.highlighted.cyan {
+    background-color: var(--color-cyan-lighter);
+  }
+
+  .link.gray {
+    border-bottom-color: var(--color-accents-2);
+  }
+
+  .link.gray:hover,
+  .link.highlighted.gray {
+    background-color: var(--color-accents-2);
+  }
+</style>

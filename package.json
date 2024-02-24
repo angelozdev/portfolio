@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@astrojs/check": "^0.5.4",
+    "@fontsource/poppins": "^5.0.8",
+    "astro": "^4.4.0",
+    "class-variance-authority": "0.7.0",
+    "modern-normalize": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.17",
+    "cssnano": "6.0.3",
+    "vite-plugin-pwa": "0.19.0"
+  },
+  "name": "navbar-with-astro",
+  "scripts": {
+    "astro": "astro",
+    "build": "astro check && astro build",
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "start": "astro dev"
+  },
+  "type": "module",
+  "version": "0.0.1"
+}

@@ -1,0 +1,83 @@
+---
+interface Props extends astroHTML.JSX.HTMLAttributes {
+  tooltip: string;
+}
+
+const { tooltip, class: className, ...rest } = Astro.props;
+---
+
+<span {...rest} class:list={["with-tooltip", className]} data-tooltip={tooltip}>
+  <slot />
+</span>
+
+<style is:global>
+  .with-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted var(--color-accents-3);
+    cursor: help;
+    font-style: italic;
+  }
+
+  .with-tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 0.75rem;
+    background-color: var(--color-accents-7);
+    color: var(--color-accents-1);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    border: 1px solid var(--color-accents-6);
+    width: max-content;
+    max-width: var(--bp-xxs);
+    visibility: hidden;
+    display: none;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .with-tooltip::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 0.25rem);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0.5rem solid transparent;
+    border-bottom-color: var(--color-accents-7);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    display: none;
+  }
+
+  .with-tooltip:hover::before,
+  .with-tooltip:active::before {
+    opacity: 1;
+    font-size: 0.75rem;
+    visibility: visible;
+    display: block;
+  }
+
+  .with-tooltip:hover::after,
+  .with-tooltip:active::after {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+
+  @media screen and (max-width: 640px) {
+    .with-tooltip::before {
+      max-width: 170px;
+      font-size: 0.5rem;
+    }
+  }
+</style>

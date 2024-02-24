@@ -1,0 +1,17 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<section id={id}>
+  <slot />
+</section>
+
+<style>
+  section {
+    scroll-margin-top: calc(80px + 1rem);
+  }
+</style>

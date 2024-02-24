@@ -1,0 +1,107 @@
+---
+import "modern-normalize/modern-normalize.css";
+import "@fontsource/poppins";
+import Navbar from "../components/navbar/navbar.astro";
+import Section from "../components/section/section.astro";
+import Hero from "../components/hero/hero.astro";
+import Profile from "../components/profile/profile.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Angelo Zambrano | Portfolio</title>
+    <meta
+      name="description"
+      content="Discover the portfolio of a seasoned Frontend Developer showcasing a curated selection of my most impactful projects. Dive into detailed insights about my professional journey, expertise in cutting-edge technologies, and a comprehensive skill set in web development. Connect with me through my integrated social media platforms for a deeper engagement and to explore my contributions to the tech community. This portfolio highlights my commitment to innovation, excellence in UI/UX design, and my passion for creating responsive, user-friendly websites."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, Web Development Portfolio, JavaScript, CSS, HTML5, UX/UI Design, Responsive Web Design, Angelo Zambrano Developer, Professional Projects, Coding Portfolio, Software Engineer, Digital Portfolio, Creative Web Solutions, Tech Blog, Technology Innovations, Portfolio Showcase"
+    />
+
+    <meta name="theme-color" content="#000000" />
+    <script is:inline src="/registerSW.js"></script>
+    <link rel="manifest" href="/manifest.webmanifest" />
+  </head>
+  <body ontouchstart="">
+    <Navbar />
+    <main>
+      <Section id="home">
+        <Hero />
+      </Section>
+
+      <Section id="profile">
+        <Profile />
+      </Section>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-background: #ffffff;
+    --color-accents-1: #fafafa;
+    --color-accents-2: #eaeaea;
+    --color-accents-3: #999999;
+    --color-accents-4: #888888;
+    --color-accents-5: #666666;
+    --color-accents-6: #444444;
+    --color-accents-7: #333333;
+    --color-accents-8: #111111;
+    --color-foreground: #000000;
+    --color-error-lighter: #f7d4d6;
+    --color-error-light: #ff1a1a;
+    --color-error-normal: #e00;
+    --color-error-dark: #c00;
+    --color-success-lighter: #d3e5ff;
+    --color-success-light: #3291ff;
+    --color-success-normal: #0070f3;
+    --color-success-dark: #0761d1;
+    --color-warning-lighter: #ffefcf;
+    --color-warning-light: #f7b955;
+    --color-warning-normal: #f5a623;
+    --color-warning-dark: #ab570a;
+    --color-violet-lighter: #d8ccf1;
+    --color-violet-light: #8a63d2;
+    --color-violet-normal: #7928ca;
+    --color-violet-dark: #4c2889;
+    --color-cyan-lighter: #aaffec;
+    --color-cyan-light: #79ffe1;
+    --color-cyan-normal: #50e3c2;
+    --color-cyan-dark: #29bc9b;
+    --color-hightlight-purple: #f81ce5;
+    --color-hightlight-magenta: #eb367f;
+    --color-hightlight-pink: #ff0080;
+    --color-hightlight-yellow: #fff500;
+
+    --bp-xxs: 240px;
+    --bp-xs: 320px;
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+    --bp-2xl: 1536px;
+  }
+
+  html {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    color: var(--color-foreground);
+  }
+
+  ::selection {
+    background-color: var(--color-success-lighter);
+    color: var(--color-foreground);
+  }
+
+  .temporal {
+    height: 70vh;
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+import Container from "../container/container.astro";
+import TextWithTooltip from "../text-with-tooltip/text-with-tooltip.astro";
+---
+
+<div class="container">
+  <Container>
+    <p class="profile">
+      I'm a software engineer deeply involved in <TextWithTooltip
+        tooltip="It's a programming language that is focused on performance and safety. It's used for systems programming, and building large, high-performance applications."
+      >
+        JavaScript
+      </TextWithTooltip>, <TextWithTooltip
+        tooltip="It's a statically typed superset of JavaScript that compiles to plain JavaScript. It's used for large-scale applications and transpiles to JavaScript."
+      >
+        TypeScript
+      </TextWithTooltip>, and developing engaging applications with <TextWithTooltip
+        tooltip="It's a JavaScript library for building user interfaces. It's used for building single-page applications and is maintained by Facebook."
+      >
+        ReactJS
+      </TextWithTooltip>. I prioritize sleek visual design and performance
+      optimization. My background includes <TextWithTooltip
+        tooltip="It's a JavaScript framework for building native mobile applications. It's used for building cross-platform mobile applications and is maintained by Facebook."
+      >
+        React Native
+      </TextWithTooltip>, and I'm currently enhancing my expertise with <TextWithTooltip
+        tooltip="It's a statically typed programming language that is focused on performance and safety. It's used for systems programming, and building large, high-performance applications."
+      >
+        Rust
+      </TextWithTooltip>. Committed to continuous learning, I strive to stay at
+      the forefront of technology advancements.
+    </p>
+  </Container>
+</div>
+
+<style>
+  .container {
+    --color-background: var(--color-accents-7);
+    --color-foreground: var(--color-accents-1);
+
+    padding: 2rem 0;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .profile {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 100;
+    text-align: center;
+  }
+</style>
