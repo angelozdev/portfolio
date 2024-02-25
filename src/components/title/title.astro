@@ -1,0 +1,21 @@
+---
+interface Props extends astroHTML.JSX.HTMLAttributes {}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<h1 class:list={["title", className]} {...rest}>
+  <slot />
+</h1>
+
+<style>
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-foreground);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+</style>

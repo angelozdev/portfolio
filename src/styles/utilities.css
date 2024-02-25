@@ -1,0 +1,101 @@
+@layer utilities {
+  .color-error-lighter {
+    color: var(--color-error-lighter);
+    border-color: var(--color-error-lighter);
+  }
+
+  .color-error-light {
+    color: var(--color-error-light);
+    border-color: var(--color-error-light);
+  }
+
+  .color-error-normal {
+    color: var(--color-error-normal);
+    border-color: var(--color-error-normal);
+  }
+
+  .color-error-dark {
+    color: var(--color-error-dark);
+    border-color: var(--color-error-dark);
+  }
+
+  .color-success-lighter {
+    color: var(--color-success-lighter);
+    border-color: var(--color-success-lighter);
+  }
+
+  .color-success-light {
+    color: var(--color-success-light);
+    border-color: var(--color-success-light);
+  }
+
+  .color-success-normal {
+    color: var(--color-success-normal);
+    border-color: var(--color-success-normal);
+  }
+
+  .color-success-dark {
+    color: var(--color-success-dark);
+    border-color: var(--color-success-dark);
+  }
+
+  .color-warning-lighter {
+    color: var(--color-warning-lighter);
+    border-color: var(--color-warning-lighter);
+  }
+
+  .color-warning-light {
+    color: var(--color-warning-light);
+    border-color: var(--color-warning-light);
+  }
+
+  .color-warning-normal {
+    color: var(--color-warning-normal);
+    border-color: var(--color-warning-normal);
+  }
+
+  .color-warning-dark {
+    color: var(--color-warning-dark);
+    border-color: var(--color-warning-dark);
+  }
+
+  .color-violet-lighter {
+    color: var(--color-violet-lighter);
+    border-color: var(--color-violet-lighter);
+  }
+
+  .color-violet-light {
+    color: var(--color-violet-light);
+    border-color: var(--color-violet-light);
+  }
+
+  .color-violet-normal {
+    color: var(--color-violet-normal);
+    border-color: var(--color-violet-normal);
+  }
+
+  .color-violet-dark {
+    color: var(--color-violet-dark);
+    border-color: var(--color-violet-dark);
+  }
+
+  .color-cyan-lighter {
+    color: var(--color-cyan-lighter);
+    border-color: var(--color-cyan-lighter);
+  }
+
+  .color-cyan-light {
+    color: var(--color-cyan-light);
+    border-color: var(--color-cyan-light);
+  }
+
+  .color-cyan-normal {
+    color: var(--color-cyan-normal);
+    border-color: var(--color-cyan-normal);
+  }
+
+  .color-cyan-dark {
+    color: var(--color-cyan-dark);
+    border-color: var(--color-cyan-dark);
+  }
+}
