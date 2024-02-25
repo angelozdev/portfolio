@@ -6,10 +6,9 @@ import Link from "../link/link.astro";
 <div class="main-container">
   <Container>
     <div class="wrapper">
-      <h1>Angelo Zambrano</h1>
+      <h1 class="name">Angelo Zambrano</h1>
       <h2>
         Software Engineer at
-
         <Link
           data-tooltip="Ubidots is a cloud IoT platform offering tools for data collection, analysis, and visualization to quickly turn sensor data into insights."
           class="with-tooltip"
@@ -44,6 +43,9 @@ import Link from "../link/link.astro";
     font-weight: 800;
     color: var(--color-accents-7);
     padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   h2 {
