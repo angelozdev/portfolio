@@ -1,11 +1,13 @@
 ---
+import "@fontsource/poppins";
 import "modern-normalize/modern-normalize.css";
 import "../styles/index.css";
-import "@fontsource/poppins";
+
 import Navbar from "../components/navbar/navbar.astro";
-import Section from "../components/section/section.astro";
+import Section from "../components/ui/section.astro";
 import Hero from "../components/hero/hero.astro";
 import Profile from "../components/profile/profile.astro";
+import About from "../components/about/about.astro";
 ---
 
 <html lang="en">
@@ -13,7 +15,7 @@ import Profile from "../components/profile/profile.astro";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <!-- <meta name="generator" content={Astro.generator} /> -->
     <title>Angelo Zambrano | Portfolio</title>
     <meta
       name="description"
@@ -37,6 +39,10 @@ import Profile from "../components/profile/profile.astro";
 
       <Section id="profile">
         <Profile />
+      </Section>
+
+      <Section id="about">
+        <About />
       </Section>
     </main>
   </body>
@@ -78,6 +84,8 @@ import Profile from "../components/profile/profile.astro";
     --color-hightlight-magenta: #eb367f;
     --color-hightlight-pink: #ff0080;
     --color-hightlight-yellow: #fff500;
+
+    --transition-animate: 300ms cubic-bezier(0.4, 0.01, 0.14, 1.87);
 
     --bp-xxs: 240px;
     --bp-xs: 320px;

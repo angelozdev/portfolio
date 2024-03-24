@@ -1,0 +1,37 @@
+---
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  src: string;
+}
+
+const { src, ...rest } = Astro.props;
+---
+
+<a
+  class="social-network"
+  target="_blank"
+  aria-label={Astro.props["aria-label"]}
+  {...rest}
+>
+  <img
+    aria-label={Astro.props["aria-label"]}
+    loading="lazy"
+    width="18px"
+    height="18px"
+    src={src}
+    alt={`${Astro.props["aria-label"]} logo`}
+  />
+</a>
+
+<style>
+  .social-network {
+    text-decoration: none;
+    color: var(--color-text);
+    line-height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0.5rem 0.75rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+import SocialNetwork from "./social-network.astro";
+---
+
+<div class="social-networks">
+  <SocialNetwork
+    src="/github.svg"
+    aria-label="GitHub"
+    href="https://www.github.com/angelozdev"
+  />
+
+  <SocialNetwork
+    src="/linkedin.svg"
+    aria-label="LinkedIn"
+    href="https://www.linkedin.com/in/angelozdev"
+  />
+</div>
+
+<style>
+  .social-networks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 640px) {
+    [aria-label="LinkedIn"] {
+      display: none;
+    }
+  }
+</style>

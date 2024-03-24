@@ -16,23 +16,23 @@ export default defineConfig({
           display: "minimal-ui",
           icons: [
             {
-              src: "/favicon.svg",
+              src: "/logo.svg",
               sizes: "192x192",
               type: "image/png",
             },
             {
-              src: "/favicon.svg",
+              src: "/logo.svg",
               sizes: "512x512",
               type: "image/png",
             },
             {
-              src: "/favicon.svg",
+              src: "/logo.svg",
               sizes: "192x192",
               type: "image/png",
               purpose: "maskable",
             },
             {
-              src: "/favicon.svg",
+              src: "/logo.svg",
               sizes: "512x512",
               type: "image/png",
               purpose: "maskable",

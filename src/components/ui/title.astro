@@ -1,0 +1,35 @@
+---
+interface Props extends astroHTML.JSX.HTMLAttributes {
+  textAlignment?: "left" | "center" | "right";
+}
+
+const { class: className, textAlignment = "center", ...rest } = Astro.props;
+---
+
+<h1 class:list={["title", className, textAlignment]} {...rest}>
+  <slot />
+</h1>
+
+<style>
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-foreground);
+    padding: 0;
+    margin: 0;
+    transition: var(--transition-animate);
+  }
+
+  .title.left {
+    text-align: left;
+  }
+
+  .title.center {
+    text-align: center;
+  }
+
+  .title.right {
+    text-align: right;
+  }
+</style>

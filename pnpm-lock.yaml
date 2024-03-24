@@ -6,22 +6,22 @@ settings:
 
 dependencies:
   '@astrojs/check':
-    specifier: ^0.5.4
+    specifier: 0.5.4
     version: 0.5.4(typescript@5.3.3)
   '@fontsource/poppins':
-    specifier: ^5.0.8
+    specifier: 5.0.8
     version: 5.0.8
   astro:
-    specifier: ^4.4.0
+    specifier: 4.4.0
     version: 4.4.0(typescript@5.3.3)
   class-variance-authority:
     specifier: 0.7.0
     version: 0.7.0
   modern-normalize:
-    specifier: ^2.0.0
+    specifier: 2.0.0
     version: 2.0.0
   typescript:
-    specifier: ^5.3.3
+    specifier: 5.3.3
     version: 5.3.3
 
 devDependencies:

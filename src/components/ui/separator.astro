@@ -1,0 +1,36 @@
+---
+interface Props {
+  align?: "left" | "center" | "right";
+}
+
+const { align = "center" } = Astro.props;
+---
+
+<div class:list={["divider-container", align]}>
+  <span role="separator" class="divider"></span>
+</div>
+
+<style>
+  .divider-container {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .divider-container.left {
+    justify-content: flex-start;
+  }
+
+  .divider-container.right {
+    justify-content: flex-end;
+  }
+
+  .divider {
+    background-color: var(--color-foreground);
+    height: 2px;
+    display: inline-block;
+    width: 6rem;
+    transition: var(--transition-animate);
+  }
+</style>

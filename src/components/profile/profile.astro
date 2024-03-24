@@ -1,12 +1,14 @@
 ---
-import Container from "../container/container.astro";
-import TextWithTooltip from "../text-with-tooltip/text-with-tooltip.astro";
-import Title from "../title/title.astro";
+import Container from "../ui/container.astro";
+import TextWithTooltip from "../ui/text-with-tooltip.astro";
+import Title from "../ui/title.astro";
+import Separator from "../ui/separator.astro";
 ---
 
 <div class="container">
   <Container>
     <Title>Hello World!</Title>
+    <Separator />
 
     <p class="profile">
       I'm a software engineer deeply involved in <TextWithTooltip
@@ -56,5 +58,23 @@ import Title from "../title/title.astro";
     line-height: 1.5;
     font-weight: 100;
     text-align: center;
+    transition: var(--transition-animate);
+    transform: translateY(0);
+  }
+
+  .title {
+    transform: translateY(0);
+  }
+
+  .container:hover .title {
+    transform: translateY(-0.25rem);
+  }
+
+  .container:hover .profile {
+    transform: translateY(0.25rem);
+  }
+
+  .container:hover [role="separator"] {
+    width: 100rem;
   }
 </style>

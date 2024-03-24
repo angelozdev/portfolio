@@ -1,0 +1,73 @@
+---
+import Container from "../ui/container.astro";
+import Title from "../ui/title.astro";
+import Separator from "../ui/separator.astro";
+---
+
+<div class="container">
+  <Container>
+    <div class="wrapper">
+      <div class="card">
+        <Title textAlignment="left">About Me</Title>
+        <Separator align="left" />
+
+        <p>
+          I was born on December 17, 1997, in Bogotá, Colombia. I am passionate
+          about web technologies, mainly because of React. I love TypeScript.
+          One of my greatest motivations is to learn. I started programming
+          since I was in school learning from YouTube videos and online
+          education platforms like Platzi and Udemy.
+        </p>
+      </div>
+
+      <div class="photo">
+        <figure>
+          <img
+            src="https://angelozdev.com/_next/image?url=%2Fimage.webp&w=2048&q=100"
+            alt="Angelo Zambrano - Web Developer"
+          />
+        </figure>
+      </div>
+    </div>
+  </Container>
+</div>
+
+<style>
+  .container {
+    padding: 3rem 0;
+  }
+
+  .wrapper {
+    display: flex;
+  }
+
+  .card {
+    --color-foreground: var(--color-accents-1);
+    --color-background: var(--color-warning-dark);
+
+    padding: 2rem;
+    flex-grow: 1;
+    max-width: 50%;
+    border: 1px solid black;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  .photo {
+    flex-grow: 1;
+    max-width: 50%;
+  }
+
+  .photo figure {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
